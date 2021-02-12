@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Albums on Your Wall</title>
+	<link rel="icon" type="image/ico" href="img/favicon.ico">
+	<link rel="stylesheet" href="styles.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<div id="headerPoster">
+			<span>Albums on Your Wall</span>
+		</div>
+		<div id="pictureEx"  style="min-height: 100vh;">		
+		</div>
+		<div id="in" style="color: #777;background-color:white;text-align:center;padding:25px 80px 50px 80px;text-align: justify;">
+			<h3>How this works</h3>
+			<p>Search an artist name, press "GO" and it will take you to their albums page. By clicking on an album, it will take you to a customizable image, which you are more than welcome to download or screenshot. For more information scroll down!</p>
+			<div id="search" style="display: block; border:2px black solid; display: -webkit-box; display: flex;">
+				<form onsubmit="event.preventDefault();" role="search">
+					<label for="search">Search for stuff</label>
+					<input id="searchInput" type="search" placeholder="Search..." required />
+					<button onclick="getResult()" type="submit">Go</button>
+				</form>
+			</div>
+			<div id="search_results"></div>
+		</div>
+		<div id="moreInfo">
+			<div id="cap">
+				<span>Download Pictures</span> 
+			</div>
+		</div>
+		<div id="moreIn" style="border-top:2px black solid;border-bottom:2px black solid; color: #777;background-color:white;text-align:center;padding:25px 80px 50px 80px;text-align: justify;">
+			<h3>Directions</h3>
+			<p style="text-align: left; font-size: 15px;"> Once you enter the album's page, feel free to change the color of the images. By clicking on the track title, it will send you straight to its spotify link.<br>	Once you are happy with the colors, just click the "Save Photo" button. Keep in mind these pictures are large. This will automatically download the image to your download folder. You can use this image as a background for your phone or even print it out. Enjoy :))</p>
+			<h3 style="font-size: 15px">Here are some resources: </h3>
+			<li style=" font-size: 15px;">
+				<a style="font-weight: bold; text-decoration: underline;"
+					href="https://www.freeprintsnow.com">FreePrintsNow.com</a> is a really good app to print out these photos which will be sent to your home. All you have to pay for is shipping. 
+			</li>
+			<li style=" font-size: 15px;">
+				<a style="font-weight: bold; text-decoration: underline;" href="https://www.shortrunposters.com/18x24-digital-poster-print.html">Shortrunposters.com</a> has cheap 18"x24" posters you can print and get sent straight to your house.
+			</li> 
+			<li style=" font-size: 15px;">
+				You could always save these photos to a flash drive and take it to your closest poster printing place such as FedEx,
+				Office Max, or Staple and print it out.
+			</li>
+			<li style=" font-size: 15px;">
+				The images this website provides look best in matte.
+			</li>
+			<h3 style="font-size: 13px">Some Known Issues: </h3>
+			<p style="font-size: small;"> When using Safari, there will be problems downloading the album's image the first time. Just download the image again and it will turn out fine or just use another browser.<br>
+			For the Majority of the Albums on this website all contents should fit properly. If there is an album that does not work properly, I apologize. But feel free to email me about it. Any other inquiry, my contact information is at to bottom of this page</p>
+		</div>
+		<div id="moreInfo" style="background-image: url(img/login.jpg);">
+			<div id="cap" >
+				<span>Contact Me</span>
+			</div>
+		</div>
+		<div id="moreIn"
+			style="border-top:2px black solid;border-bottom:2px black solid; color: #777;background-color:white;text-align:center;padding:25px 80px 50px 80px;text-align: justify;">
+			<h3>Contact Information</h3>
+			<p style="text-align: center; font-size: small; ">Email: <a style="font-weight: bold; text-decoration: underline;" href="mailto:albumsonyourwall@gmail.com">albumsonyourwall@gmail.com</a></p>
+			<h3 style="font-size: 15px">Donation is always Appreciated </h3>
+			<div style="display: inline; margin: 0 auto;">
+				<p style="text-align: center; font-size: small;"><a style="margin-right: 20px; font-weight: bold; text-decoration: underline;" href="https://www.paypal.com/paypalme/jespinal488">PayPal</a> <a style="font-weight: bold; text-decoration: underline;" href="https://venmo.com/Joel-Espinal-12">Venmo</a></p>
+				<p style="text-align: center; font-size: small;"></p>
+			</div>
+			<p style="margin: 0 auto; letter-spacing: 2px; text-align: center;text-transform: uppercase ;font-size: x-small;">This website was created solely by Joel Espinal</p>
+			</div>
+		
+	</div>
+	
+	</div>
+	<script src = "js/search.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<div id="hello"></div>
+	<script>
+	</script>
+	<script>
+	
+	$("#inpt_search").on('focus', function () {
+		$(this).parent('label').addClass('active');
+	});
+
+	$("#inpt_search").on('blur', function () {
+		if ($(this).val().length == 0)
+			$(this).parent('label').removeClass('active');
+	});
+	</script>
+</body>
+</html>
